@@ -1,164 +1,228 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #1e1e1e;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-.game-container {
-  text-align: center;
-  width: 80%;
-  max-width: 1200px;
-  margin-top: 20px;
+/* Header */
+header {
+    background-color: rgba(13, 13, 13, 0.9);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  background-color: #333;
-  padding: 10px;
-  border-radius: 10px;
-  border: 2px solid #555;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-.health-bar, .energy-bar, .experience-bar {
-  display: flex;
-  align-items: center;
+.logo img {
+    height: 50px;
 }
 
-.bar {
-  width: 200px;
-  height: 20px;
-  background-color: #444;
-  border-radius: 10px;
-  margin-left: 10px;
-  overflow: hidden;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
-.health, .energy, .experience {
-  height: 100%;
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.health {
-  background-color: #4CAF50;
+.nav-links a:hover {
+    color: #ffcc00;
 }
 
-.energy {
-  background-color: #FFD700;
+.cta-button {
+    background-color: #ffcc00;
+    color: #0d0d0d;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
 }
 
-.experience {
-  background-color: #2196F3;
+.cta-button:hover {
+    background-color: #e6b800;
 }
 
-.stats {
-  display: flex;
-  gap: 20px;
-  font-size: 1.2em;
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
 }
 
-.stats p {
-  margin: 0;
+.hero-content {
+    z-index: 2;
 }
 
-.game-area {
-  display: flex;
-  justify-content: space-between;
-  border: 2px solid #444;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #333;
-  margin-top: 20px;
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-.left-panel, .right-panel {
-  width: 20%;
-  border: 2px solid #555;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #444;
+.hero span {
+    color: #ffcc00;
 }
 
-.combat-area {
-  flex-grow: 1;
-  margin: 0 20px;
-  border: 2px solid #555;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #444;
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.combat-log {
-  height: 100px;
-  overflow-y: auto;
-  border: 1px solid #555;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #333;
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
-.combat-actions button {
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  border-radius: 5px;
-  background-color: #555;
-  color: #fff;
-  cursor: pointer;
+/* Sección "Sobre el Juego" */
+.about {
+    padding: 4rem 2rem;
+    text-align: center;
 }
 
-.combat-actions button:hover {
-  background-color: #777;
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.about-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
 }
 
-h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.feature {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
 }
 
-ul li {
-  margin-bottom: 5px;
-  cursor: pointer;
+.feature i {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 1rem;
 }
 
-ul li:hover {
-  color: #ffcc00;
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
-.quest-status {
-  font-style: italic;
-  color: #888;
+.feature p {
+    font-size: 1rem;
 }
 
-.completed {
-  color: #4CAF50;
+/* Galería */
+.gallery {
+    padding: 4rem 2rem;
+    text-align: center;
 }
 
-.enemy-health-bar {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-.enemy-health {
-  height: 100%;
-  background-color: #FF0000;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 1rem;
+    transition: bottom 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    bottom: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffcc00;
 }
