@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crónicas de Eldoria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="top-bar">
+            <div class="health-bar">
+                <span>Vida: </span>
+                <div class="bar">
+                    <div class="health" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div class="energy-bar">
+                <span>Energía: </span>
+                <div class="bar">
+                    <div class="energy" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="experience-bar">
+                <span>Experiencia: </span>
+                <div class="bar">
+                    <div class="experience" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="stats">
+                <p>Recursos: <span id="resources">0</span></p>
+                <p>Nivel: <span id="level">1</span></p>
+                <p>Fragmentos: <span id="fragments">0</span></p>
+            </div>
+        </div>
+        <h1>Crónicas de Eldoria</h1>
+        <div class="game-area">
+            <div class="left-panel">
+                <h2>Enemigos de la Zona</h2>
+                <ul id="enemies">
+                    <li data-enemy="lobo">Lobo Corrupto <span class="count">(0/5)</span></li>
+                    <li data-enemy="orco">Orco de la Sombra <span class="count">(0/3)</span></li>
+                    <li data-enemy="esqueleto">Esqueleto Maldito <span class="count">(0/2)</span></li>
+                </ul>
+            </div>
+            <div class="combat-area" id="combat-area">
+                <h2>Combate</h2>
+                <div class="combat-log" id="combat-log"></div>
+                <div class="enemy-health-bar">
+                    <span>Salud del Enemigo: </span>
+                    <div class="bar">
+                        <div class="enemy-health" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="combat-actions">
+                    <button id="attack-button">Atacar</button>
+                    <button id="special-button">Habilidad Especial</button>
+                </div>
+            </div>
+            <div class="right-panel">
+                <h2>Misiones</h2>
+                <ul id="quests">
+                    <li data-quest="lobo" data-reward="50">Derrota a 5 Lobos Corruptos <span class="quest-status">(No completada)</span></li>
+                    <li data-quest="orco" data-reward="100">Derrota a 3 Orcos de la Sombra <span class="quest-status">(No completada)</span></li>
+                    <li data-quest="esqueleto" data-reward="150">Derrota a 2 Esqueletos Malditos <span class="quest-status">(No completada)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+		✅= Completado   ❌= Por completar
+
+
+❌Si mueres pagar, usar piedra de resurrección o reiniciar juego.
+❌Añadir piedra de hogar.
+❌Añadir mientras estas en viaje X tiempo, encontrar recursos.
+
+
+
+✅Se ha cambiado la pantalla selección de personaje por otra mas detallada.
+✅Se ha cambiado el nombre del juego y contenido por motivos de Copyright.
+✅Agregado sistema de daño lógico por clase, nivel y enemigo.
+✅Agregado mejora de estadísticas principales al subir de nivel.
+✅Añadir tienda.
+✅Agregar viajes.
